@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameInput"
+        android:hint="@string/fullName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        app:layout_constraintEnd_toStartOf="@+id/edit_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/addressInput"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameEditText"
+            android:enabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/addressInput"
+        android:hint="@string/address"
+        android:layout_width="0dp"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/edit_address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameInput"
+        app:layout_constraintBottom_toTopOf="@id/commentInput"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addressEditText"
+            android:enabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/commentInput"
+        android:hint="@string/comment"
+        android:layout_width="0dp"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/edit_comment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addressInput"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/commentEditText"
+            android:enabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/edit_name"
+        android:hint="@string/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/nameInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/nameInput"
+        app:layout_constraintTop_toTopOf="@id/nameInput"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:textSize="@dimen/text_size_button"/>
+
+    <Button
+        android:id="@+id/edit_address"
+        android:hint="@string/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/addressInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/addressInput"
+        app:layout_constraintTop_toTopOf="@id/addressInput"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:textSize="@dimen/text_size_button"/>
+
+    <Button
+        android:id="@+id/edit_comment"
+        android:hint="@string/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/commentInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/commentInput"
+        app:layout_constraintTop_toTopOf="@id/commentInput"
+        android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:textSize="@dimen/text_size_button"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
